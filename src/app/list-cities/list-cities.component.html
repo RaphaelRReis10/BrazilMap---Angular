@@ -1,0 +1,14 @@
+<div class="container main-container">
+  <div class="row text-center">
+    <div *ngFor="let citie of cities" style="padding-bottom: 3px">
+      <h4 class="titleCitie">
+        <a
+          href="https://www.google.com/search?q={{ citie.nome }}"
+          target="_blank"
+          >{{ citie.nome }}</a
+        >
+        - Codigo Ibge: {{ citie.codigo_ibge }}
+      </h4>
+    </div>
+  </div>
+</div>

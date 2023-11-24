@@ -1,0 +1,49 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <img
+      src="assets/brazil.png"
+      alt="Logo"
+      width="35"
+      height="35"
+      class="d-inline-block align-text-top logo"
+      id="img"
+      style="margin-right: 10px"
+    />
+    <a class="navbar-brand" [routerLink]="['/home']">Brazil Map</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarResponsive"
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse justify-content-center"
+      id="navbarResponsive"
+    >
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/north']">North</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/northeast']">Northeast</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/centralwest']">Central-West</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/southeast']">Southeast</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/south']">South</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- FIM Navigation -->

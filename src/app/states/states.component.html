@@ -1,0 +1,27 @@
+<div class="container main-container">
+  <div class="row text-center">
+    <div
+      *ngFor="let state of states"
+      class="col-md-6 col-sm-6 col-12 mx-auto"
+      style="padding-bottom: 30px"
+    >
+      <div class="card h-100">
+        <div>
+          <h4 class="card-title">{{ state.nome }}</h4>
+        </div>
+
+        <div class="card-footer">
+          <button
+            class="btn btn-primary"
+            (click)="openModalCities(state.sigla)"
+          >
+            See cities
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-list-cities></app-list-cities>
+<!-- 
+MUDAR A MODAL DE CITIES PARA A HOME -->

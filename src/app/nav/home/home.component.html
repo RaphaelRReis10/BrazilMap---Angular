@@ -1,0 +1,206 @@
+<!--Map&Text-->
+<header class="py-5 mb-10">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-lg-4">
+        <img src="assets/mapa.png" style="width: 80%; height: auto" />
+      </div>
+      <div class="col-lg-8">
+        <h1 class="display-6 text-black mt-5 mb-2">
+          A Mosaic of Regions and State
+        </h1>
+        <p class="lead mb-1 text-black"></p>
+        <p>
+          Brazil, a nation of continental proportions, is composed of five
+          distinct geographical regions. The North, dominated by the majestic
+          Amazon Rainforest, harbors immense biodiversity. In the Northeast,
+          stunning beaches intermingle with historic cities, witnesses to the
+          colonial past. The Central-West stands out with its vast plains and
+          unique Pantanal ecosystem. In the Southeast, bustling urban centers
+          combine with beautiful natural landscapes, such as Rio de Janeiro's
+          beaches and the Atlantic Forest. In the South, European influence is
+          visible in both cities and traditions.
+        </p>
+        <p>
+          The country is subdivided into 27 states, each with its own
+          particularities. São Paulo, the most populous state, is an economic
+          and cultural hub. Amazonas houses the majority of the Brazilian
+          Amazon. Bahia, in the Northeast, is rich in Afro-Brazilian culture and
+          history. Minas Gerais is famous for its mountains and historical
+          wealth. Rio Grande do Sul, in the South, stands out with its unique
+          traditions and cuisine.
+        </p>
+        <p>
+          In each region and state, Brazil presents itself as a diverse and
+          multifaceted nation, where geography, culture, and history intertwine
+          to form a country of singular proportions.
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!--Regions-->
+<div class="col-15">
+  <div class="container main-container">
+    <div class="row text-center">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img
+            class="card-img-top"
+            src="/assets/N.png"
+            height="164px"
+            width="253px"
+            alt=""
+          />
+          <div class="card-body">
+            <h4 class="card-title">North</h4>
+            <p class="card-text">
+              The vast Amazon Rainforest, home to diverse wildlife, is the pride
+              of the North. Indigenous cultures thrive in this lush paradise.
+            </p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary" (click)="openModal(1)">
+              See States
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img
+            class="card-img-top"
+            src="/assets/ND.png"
+            height="164px"
+            width="253px"
+            alt=""
+          />
+          <div class="card-body">
+            <h4 class="card-title">Northeast</h4>
+            <p class="card-text">
+              In the Northeast, historic cities and stunning beaches intertwine,
+              reflecting a rich blend of colonial heritage and natural beauty.
+            </p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary" (click)="openModal(2)">
+              See States
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img
+            class="card-img-top"
+            src="/assets/CO.png"
+            height="164px"
+            width="253px"
+            alt=""
+          />
+          <div class="card-body">
+            <h4 class="card-title">Central-West</h4>
+            <p class="card-text">
+              The Central-West region stands out with its expansive plains and
+              the unique Pantanal ecosystem, a biodiversity hotspot.
+            </p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary" (click)="openModal(5)">
+              See States
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img
+            class="card-img-top"
+            src="/assets/SD.png"
+            height="164px"
+            width="253px"
+            alt=""
+          />
+
+          <div class="card-body">
+            <h4 class="card-title">Southeast</h4>
+            <p class="card-text">
+              The bustling urban centers of the Southeast harmonize with
+              breathtaking natural landscapes, from Rio's beaches to the
+              Atlantic Forest.
+            </p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary" (click)="openModal(3)">
+              See States
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-12 mb-4 mx-auto">
+        <div class="card h-100">
+          <img
+            class="card-img-top"
+            src="/assets/s.png"
+            height="164px"
+            width="253px"
+            alt=""
+          />
+          <div class="card-body">
+            <h4 class="card-title">South</h4>
+            <p class="card-text">
+              In the South, European influence is visible in cities and
+              traditions, adding a unique charm to the cultural tapestry
+            </p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary" (click)="openModal(4)">
+              See States
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- The Modal STATES -->
+<div id="myModal" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ modalTitle }}</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Fechar"
+          (click)="closeModal()"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <!-- Conteúdo da modal aqui -->
+        <app-states></app-states>
+
+        <!-- Conteúdo da modal aqui -->
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-bs-dismiss="modal"
+            aria-label="Fechar"
+            (click)="closeModal()"
+          >
+            Close
+          </button>
+        </div>
+        <!-- Modal footer -->
+      </div>
+    </div>
+  </div>
+</div>
